@@ -14,7 +14,7 @@ from demostore_automation.src.pages.MyAccountSignedOutPage import MyAccountSigne
 @pytest.mark.usefixtures("init_driver")
 class TestFreeShippingBanner:
 
-
+    @pytest.mark.estcf8
     @pytest.mark.tcid69
     @pytest.mark.pioneertcid7
     def test_verify_free_shipping_banner_displayed_in_home_page(self):
@@ -25,7 +25,8 @@ class TestFreeShippingBanner:
 
         # verify the notification bar is displayed
         NotificationBar(self.driver).verify_notification_bar_is_displayed()
-
+    
+    @pytest.mark.estcf9
     @pytest.mark.tcid70
     @pytest.mark.pioneertcid8
     def test_verify_free_shipping_banner_displayed_in_cart_page(self):
@@ -35,6 +36,7 @@ class TestFreeShippingBanner:
         # verify the notification bar is displayed
         NotificationBar(self.driver).verify_notification_bar_is_displayed()
 
+    @pytest.mark.estcf10
     @pytest.mark.tcid71
     @pytest.mark.pioneertcid9
     def test_verify_free_shipping_banner_displayed_in_checkout_page(self):
@@ -46,6 +48,7 @@ class TestFreeShippingBanner:
         # verify the notification bar is displayed
         NotificationBar(self.driver).verify_notification_bar_is_displayed()
 
+    @pytest.mark.estcf11
     @pytest.mark.tcid72
     @pytest.mark.pioneertcid10
     def test_verify_free_shipping_banner_not_displayed_in_my_account_page(self):

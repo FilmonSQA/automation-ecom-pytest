@@ -8,7 +8,8 @@ pytestmark = [pytest.mark.feregression, pytest.mark.fesmoke, pytest.mark.my_acco
 @pytest.mark.usefixtures("init_driver")
 class TestLoginNegative:
 
-
+    @pytest.mark.estcf13
+    @pytest.mark.estcf1
     @pytest.mark.tcid12
     @pytest.mark.pioneertcid1
     def test_login_none_existing_user(self):

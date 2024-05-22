@@ -14,7 +14,7 @@ pytestmark = [pytest.mark.feregression, pytest.mark.fesmoke, pytest.mark.my_acco
 @pytest.mark.usefixtures("init_driver")
 class TestRegisterNewUser:
 
-
+    @pytest.mark.estcf12
     @pytest.mark.tcid13
     @pytest.mark.pioneertcid2
     def test_register_valid_new_user(self):

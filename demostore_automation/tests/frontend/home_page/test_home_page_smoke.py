@@ -18,6 +18,7 @@ class TestHomePageSmoke:
         self.homepage.go_to_home_page()
         yield
 
+    @pytest.mark.estcf4
     @pytest.mark.tcid1
     @pytest.mark.pioneertcid4
     def test_verify_number_of_products_displayed(self, setup):
@@ -29,6 +30,7 @@ class TestHomePageSmoke:
             f"Unexpected number of products displayed on home page. " \
             f"Expected: {expected_number_of_products}, Actual: {len(displayed_products)}"
 
+    @pytest.mark.estcf5
     @pytest.mark.tcid67
     @pytest.mark.pioneertcid5
     def test_verify_heading_is_displayed(self, setup):
@@ -38,6 +40,7 @@ class TestHomePageSmoke:
             f"Displayed heading in home page is not as expected. " \
             f"Expected: {expected_heading}, Actual: {displayed_heading}"
 
+    @pytest.mark.estcf6
     @pytest.mark.pioneertcid6
     def test_verify_header_menu_is_displayed(self, setup):
         self.header.assert_all_menu_items_displayed()
