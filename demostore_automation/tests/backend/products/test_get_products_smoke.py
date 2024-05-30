@@ -8,6 +8,7 @@ import logging as logger
 pytestmark = [pytest.mark.beregression, pytest.mark.besmoke, pytest.mark.products_api]
 
 
+@pytest.mark.estcb4
 @pytest.mark.tcid24
 @pytest.mark.pioneertcid15
 def test_get_all_products_returns_not_empty():
@@ -15,6 +16,7 @@ def test_get_all_products_returns_not_empty():
     rs_api = woo_api_helper.get("products", expected_status_code=200)
     assert rs_api, "Get all products endpoint returned nothing."
 
+@pytest.mark.estcb5
 @pytest.mark.tcid25
 @pytest.mark.pioneertcid14
 def test_get_product_by_id():

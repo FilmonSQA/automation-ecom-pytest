@@ -9,6 +9,7 @@ from demostore_automation.src.dao.customers_dao import CustomersDAO
 pytestmark = [pytest.mark.beregression, pytest.mark.besmoke, pytest.mark.customers_api]
 
 
+@pytest.mark.estcb1
 @pytest.mark.tcid29
 @pytest.mark.pioneertcid11
 def test_create_customer_only_email_password():
@@ -51,6 +52,7 @@ def test_create_customer_only_email_password():
                                                                 f"Email: {email}, Expected display: {expected_display_name}" \
                                                                 f"DB display name: {db_info[0]['user_login']}"
 
+@pytest.mark.estcb2
 @pytest.mark.tcid47
 @pytest.mark.pioneertcid12
 def test_create_customer_fail_for_existing_email():
@@ -80,6 +82,7 @@ def test_create_customer_fail_for_existing_email():
     assert 'An account is already registered with your email address.' in rs_body['message'], f"Create customer with existing user " \
                             f"response body 'message' did not contain expected text."
 
+@pytest.mark.estcb3
 @pytest.mark.tcid32
 @pytest.mark.pioneertcid13
 def test_create_customer_fail_when_no_password_is_provided():
