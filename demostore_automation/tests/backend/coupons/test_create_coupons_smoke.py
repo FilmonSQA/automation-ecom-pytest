@@ -5,7 +5,7 @@ import pytest
 from demostore_automation.src.utilities.genericUtilities import generate_random_string
 from demostore_automation.src.api_helpers.CouponsAPIHelper import CouponsAPIHelper
 
-
+@pytest.mark.smoke
 @pytest.mark.estcb7
 def test_create_coupon_with_invalid_discount_type():
     """
