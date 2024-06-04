@@ -11,7 +11,7 @@ class Test50OffCoupon:
 
     @pytest.mark.estcf14
     def test_verify_50_off_coupon_works(self):
-
+    
         # go to home page
         home_page = HomePage(self.driver)
         home_page.go_to_home_page()
@@ -19,7 +19,7 @@ class Test50OffCoupon:
         # add item to cart
         home_page.click_first_add_to_cart_button()
 
-        # make sure teh cart is updated before going to cart
+        # make sure the cart is updated before going to cart
         # beacause when we click on add to cart and go to car, it happens so fast that we 
         # get to the cart page bedreo the cart is updated, So we see that there is '1 item' in 
         # the cart on the top nav bar but the middle of the page says that there is no item in the cart
