@@ -6,7 +6,7 @@ class MainConfigs:
     @staticmethod
     def get_base_url():
         base_url = os.environ.get('BASE_URL')
-        if not base_url:
+        if not base_url: 
             raise Exception("Environment variable 'BASE_URL' must be set.")
         else:
             return base_url

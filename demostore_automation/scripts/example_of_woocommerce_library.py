@@ -1,3 +1,5 @@
+
+
 from woocommerce import API
 import json
 
@@ -14,4 +16,3 @@ wcapi = API(
 payload = {"per_page": 90}
 rs = wcapi.get("coupons", params=payload)
 body = rs.json()
-breakpoint()
