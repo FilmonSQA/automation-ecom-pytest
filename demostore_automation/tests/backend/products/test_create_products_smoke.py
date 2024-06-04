@@ -32,16 +32,16 @@ def test_create_1_simple_product():
     assert product_rs['price'] == ['regular_price'], f"The price in the request and response do not match" \
     f"for creat product api with payload={payload}"
 
-
     #verify the product is created in the database
     #  look for the porduct by id
     product_id = product_rs["id"]
     products_dao = ProductsDAO()
     db_product = products_dao.get_product_by_id(product_id)
 
-
     assert db_product, f"Unable to find the product in database. Create product payload={payload}"
     db_title = db_product[0]['post_title']
     assert db_title ==payload['name'], f"Create product the 'post_title' field in DB is not same as the 'name' field in payload."
+
+
 
     
