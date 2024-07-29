@@ -21,7 +21,7 @@ class TestCartUpdateButton:
 
     
     @pytest.mark.estcf15
-    def test_update_cart_button_disabled(self,setup)
+    def test_update_cart_button_disabled(self, setup):
     
         # Test to verify that the 'Update Cart' button is disabled initially
         # Args: Setup: A Setup object.
@@ -36,7 +36,7 @@ class TestCartUpdateButton:
         assert update_cart_button.is_enabled() == False, "'Update Cart' button is not disabled"
 
     @pytest.mark.estcf16
-    def test_update_cart_button_enabled(self,setup)
+    def test_update_cart_button_enabled(self, setup):
         
         # Test to verify that the 'Update Cart' button is enabled after changing the cart quantity. 
         # Args: Setup: A setup object
@@ -57,4 +57,4 @@ class TestCartUpdateButton:
 
         # Assert that the button is now enabled
         assert update_cart_button.is_enabled(), "'Update Cart' button is still disabled after changing qanitiy"
-        
+
