@@ -1,4 +1,5 @@
 
+
 import pytest
 from demostore_automation.src.pages.MyAccountSignedOutPage import MyAccountSignedOutPage
 
@@ -20,7 +21,7 @@ class TestLoginNegative:
         my_acct_page = MyAccountSignedOutPage(self.driver)
         my_acct_page.go_to_my_account()
         my_acct_page.input_login_username("abcdef@supersqa.com")
-        my_acct_page.input_login_password("abcdefg")
+        my_acct_page.input_login_password("abcdeg")
         my_acct_page.click_login_button()
 
         expected_err = "Unknown email address. Check again or try your username."
