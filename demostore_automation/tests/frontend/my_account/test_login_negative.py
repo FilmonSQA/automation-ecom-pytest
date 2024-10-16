@@ -30,5 +30,3 @@ class TestLoginNegative:
 
         # Adding an assertion to verify the error message is displayed correctly
         assert my_acct_page.get_error_message() == expected_err, "Error message does not match expected text."
-
-        breakpoint()
