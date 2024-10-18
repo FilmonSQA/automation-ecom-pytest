@@ -1,3 +1,4 @@
+
 import pytest
 from demostore_automation.src.pages.MyAccountSignedOutPage import MyAccountSignedOutPage
 
@@ -5,7 +6,6 @@ pytestmark = [pytest.mark.fe, pytest.mark.regression, pytest.mark.smoke, pytest.
 
 @pytest.mark.usefixtures("init_driver")
 class TestLoginNegative:
-    
     """
     A set of negative tests to verify the login functionality with non-existing users.
     """
@@ -21,12 +21,8 @@ class TestLoginNegative:
 
         expected_err = "Unknown email address. Check again or try your username."
 
-        """
-        Wait for the error to appear.
-        """
+        # Wait for the error to appear.
         my_acct_page.wait_until_error_is_displayed(expected_err)
 
-        """
-        Add an assertion to verify the error message is displayed correctly.
-        """
+        # Add an assertion to verify the error message is displayed correctly.
         assert my_acct_page.get_error_message() == expected_err, "Error message does not match expected text."
