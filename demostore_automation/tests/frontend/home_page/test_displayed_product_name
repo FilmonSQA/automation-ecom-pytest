@@ -33,10 +33,9 @@ class  TestProductName:
             Test to verify that the expected heading "Showing 1-16 of 17" is displayed
             """
             self.homepage.go_to_home_page()
-            expected.heading = 'Showing 1-16 of 17 results'
+            expected_heading = 'Showing 1-16 of 17 results'
             time.sleep(10)
             displayed_heading = self.homepage.get_a_b_results()
             assert displayed_heading == expected_heading, \
                 f"Showing 1-16 of 17 results is not displayed" \
                 f"Expected: {expected_heading}, Actual: {displayed_heading}"
-            
